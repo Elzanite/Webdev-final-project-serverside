@@ -17,8 +17,7 @@ const ReviewsController = (app) => {
         username: req.body.username,
         first: req.body.first,
         last: req.body.last,
-        body: req.body.body,
-        rating: req.body.rating
+        body: req.body.body
       };
   
       dao.addReview(review)

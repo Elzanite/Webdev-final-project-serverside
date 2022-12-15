@@ -5,7 +5,6 @@ const reviewsSchema = mongoose.Schema({
     product_id: String, 
     first: String,
     last: String, 
-    body: String, 
-    rating: Number, 
+    body: String,
 }, {collection: 'reviews'})
 export default reviewsSchema
