@@ -1,13 +1,7 @@
-import reviewsModel from "./reviews-model.js";
+import model from "./reviews-model.js";
 
-export const createReview = (review) =>
-    reviewsModel.create(review)
+export const findAllReviews = () => model.find();
 
-export const findReviewsByMovie = (imdbID) =>
-    reviewsModel
-        .find({imdbID})
-        .populate('author')
-        .exec()
+export const findProductReviews = (productId) => model.find({product_id: productId});
 
-export const findReviewsByAuthor = (author) =>
-    reviewsModel.find({author})
+export const addReview = (review) => model.create(review);

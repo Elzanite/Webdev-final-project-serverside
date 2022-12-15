@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
 const reviewsSchema = mongoose.Schema({
-    review: String,
-    imdbID: String,
-    author: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'UserModel'
-    }
+    username: String,   
+    product_id: String, 
+    first: String,
+    last: String, 
+    body: String, 
+    rating: Number, 
 }, {collection: 'reviews'})
 export default reviewsSchema

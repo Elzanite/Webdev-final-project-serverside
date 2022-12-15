@@ -3,7 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import session from 'express-session';
 import UserController from './users/users-controller.js';
-
+import ReviewController from './reviews/reviews-controller.js';
 const options = {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -29,6 +29,6 @@ app.use(session({
 }))
 app.use(express.json())
 UserController(app)
-
+ReviewController(app)
 
 app.listen(4000);     
